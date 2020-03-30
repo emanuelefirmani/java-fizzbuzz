@@ -32,6 +32,16 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void should_calculate_multiples_of_15() {
+        int[] values = new int[] {15,30,45,60,75};
+        FizzBuzz sut = new FizzBuzz();
+        for (int value : values) {
+            String actual = sut.calculate(value);
+            assertThat(actual).isEqualTo("FizzBuzz");
+        }
+    }
+
+    @Test
     public void should_calculate_non_multiples() {
         int[] values = new int[] {1,2,4,7,8,11,13,14,16,17,19,22};
         FizzBuzz sut = new FizzBuzz();
