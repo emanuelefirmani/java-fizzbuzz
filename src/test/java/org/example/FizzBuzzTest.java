@@ -20,4 +20,14 @@ public class FizzBuzzTest {
             assertThat(actual).isEqualTo("Fizz");
         }
     }
+
+    @Test
+    public void should_calculate_multiples_of_5() {
+        int[] values = new int[] {5,10,20,25,35,40,50,55};
+        FizzBuzz sut = new FizzBuzz();
+        for (int value : values) {
+            String actual = sut.calculate(value);
+            assertThat(actual).isEqualTo("Buzz");
+        }
+    }
 }
