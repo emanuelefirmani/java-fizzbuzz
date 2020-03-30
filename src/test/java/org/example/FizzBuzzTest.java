@@ -30,4 +30,14 @@ public class FizzBuzzTest {
             assertThat(actual).isEqualTo("Buzz");
         }
     }
+
+    @Test
+    public void should_calculate_non_multiples() {
+        int[] values = new int[] {1,2,4,7,8,11,13,14,16,17,19,22};
+        FizzBuzz sut = new FizzBuzz();
+        for (int value : values) {
+            String actual = sut.calculate(value);
+            assertThat(actual).isEqualTo(String.valueOf(value));
+        }
+    }
 }
