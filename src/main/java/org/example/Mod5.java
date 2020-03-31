@@ -3,6 +3,8 @@ package org.example;
 public class Mod5 implements ICalculator {
     @Override
     public String calculate(int value) {
-        return "Buzz";
+        if(value % 5 == 0)
+            return "Buzz";
+        return null;
     }
 }

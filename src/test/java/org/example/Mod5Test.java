@@ -2,7 +2,6 @@ package org.example;
 
 import org.junit.Test;
 import static org.assertj.core.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 public class Mod5Test {
     @Test
@@ -12,6 +11,16 @@ public class Mod5Test {
         for (int value : values) {
             String actual = sut.calculate(value);
             assertThat(actual).isEqualTo("Buzz");
+        }
+    }
+
+    @Test
+    public void should_return_null() {
+        Mod5 sut = new Mod5();
+        int[] values = new int[] {1,2,3,14,21,29,31};
+        for (int value : values) {
+            String actual = sut.calculate(value);
+            assertThat(actual).isNull();
         }
     }
 }
