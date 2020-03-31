@@ -14,4 +14,14 @@ public class Mod15Test {
             assertThat(actual).isEqualTo("FizzBuzz");
         }
     }
+
+    @Test
+    public void should_return_null() {
+        Mod15 sut = new Mod15();
+        int[] values = new int[] {1,2,3,14,20,29,31};
+        for (int value : values) {
+            String actual = sut.calculate(value);
+            assertThat(actual).isNull();
+        }
+    }
 }
